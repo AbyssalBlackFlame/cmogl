@@ -2,6 +2,7 @@
 #include <math.h>
 #include "./glad/include/glad.h"
 #include <GLFW/glfw3.h>
+#include <filesystem>
 
 #include "./HeaderFiles/shaderClass.h"
 #include "./HeaderFiles/VAO.h"
@@ -9,6 +10,7 @@
 #include "./HeaderFiles/EBO.h"
 
 int main() {
+
 	//initializes GLFW
 	glfwInit();
 
@@ -54,7 +56,7 @@ int main() {
 	//sets window viewport
 	glViewport(0, 0, 800, 800);
 
-	Shader shaderProgram("default.vert", "default.frag");
+	Shader shaderProgram("../ResourceFiles/shaders/default.vert", "../ResourceFiles/shaders/default.frag");
 
 	VAO VAO1;
 	VAO1.Bind();
